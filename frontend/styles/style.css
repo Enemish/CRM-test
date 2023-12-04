@@ -1,0 +1,60 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.non-clickable {
+  pointer-events: none;
+  cursor: default;
+}
+.contact-tbl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 130px;
+}
+.contact-item {
+  position: relative;
+  margin: 7px;
+}
+.contact-icon {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.contact-icon-phone {
+  background-image: url(/images/phone.svg);
+}
+.contact-icon-add-phone {
+  background-image: url(/images/phone.svg);
+}
+.contact-icon-email {
+  background-image: url(/images/mail.svg);
+}
+.contact-icon-vk {
+  background-image: url(/images/vk.svg);
+}
+.contact-icon-facebook {
+  background-image: url(/images/fb.svg);
+}
+.contact-icon-other {
+  background-image: url(/images/contact.svg);
+}
+.contact-value {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+  top: -30px; /* или другое значение, чтобы окошко было над иконкой */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap; /* чтобы текст не переносился на новую строку */
+}
+.contact-item:focus
+  .contact-value {
+    display: flex;
+}

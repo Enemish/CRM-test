@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles/style.css">
+      <script src="scripts/main.js" defer></script>
+      <title>CRM система</title>
+  </head>
+  <body>
+    <header>
+        <img src="path/to/logo.png" alt="Логотип компании">
+        <input type="search" id="search-input" placeholder="Поиск клиентов...">
+    </header>
+    <main>
+      <table id="client-table">
+        <thead>
+          <tr>
+            <th data-sort ="id" data-sort-direction="asc">ID<span>&#129045;</span></th>
+            <th data-sort ="name" data-sort-direction="asc">Имя Фамилия Отчество<span>&#129045;</span><span>А-Я</span></th>
+            <th data-sort ="createdAt" data-sort-direction="asc">Дата и время создания<span>&#129045;</span></th>
+            <th data-sort ="updatedAt" data-sort-direction="asc">Последние изменения<span>&#129045;</span></th>
+            <th class="non-clickable">Контакты</th>
+            <th class="non-clickable">Действия</th>
+          </tr>
+        </thead>
+        <tbody>
+            <!-- Здесь будут отображаться данные клиентов -->
+        </tbody>
+      </table>
+      <button id="add-client-button">Добавить клиента</button>
+      <!-- Модальное окно для добавления/редактирования клиентов -->
+      <div id="client-modal" style="display: none;">
+        <form id="client-form">
+          <label for="name-input">Имя:</label>
+          <input type="text" id="name-input" required>
+
+          <label for="surname-input">Фамилия:</label>
+          <input type="text" id="surname-input" required>
+
+          <label for="last-name-input">Отчество:</label>
+          <input type="text" id="last-name-input">
+
+          <button type="button" id="add-contact-button">Добавить контакт</button>
+          <div id="contacts"></div>
+          <button type="submit" id="save-contact-button">Сохранить</button>
+        </form>
+        <button type="button" id="close-modal-button">Закрыть</button>
+      </div>
+    </main>
+  </body>
+</html>
